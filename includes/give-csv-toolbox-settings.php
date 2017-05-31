@@ -191,6 +191,22 @@ if ( ! class_exists( 'Give_Settings_CSV' ) ) :
                                                id="give-export-donation-status"><?php esc_html_e( 'Donation Status', 'give' ); ?>
                                     </label>
                                 </li>
+																<!-- Add Custom Fields -->
+																<li>
+																	<label for="give-export-give-simple-note-field">
+																		<input type="checkbox" checked
+																			name="give_csv_toolbox_export_option[give_simple_note_field]"
+																			id="give-export-give-simple-note-field"><?php esc_html_e( 'Note', 'give' ); ?>
+																	</label>
+																</li>
+																<li>
+																	<label for="give-export-give-simple-anon-field">
+																		<input type="checkbox" checked
+																			name="give_csv_toolbox_export_option[give_simple_anon_field]"
+																			id="give-export-give-simple-anon-field"><?php esc_html_e( 'Anonymous', 'give' ); ?>
+																	</label>
+																</li>
+																<!-- END Add Custom Fields -->
                                 <li>
                                     <label for="give-export-payment-gateway">
                                         <input type="checkbox" checked

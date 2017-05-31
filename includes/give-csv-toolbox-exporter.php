@@ -139,6 +139,14 @@ class Give_CSV_Toolbox_Donations_Export extends Give_Batch_Export {
 				case 'donation_status' :
 					$cols['donation_status'] = __( 'Donation Status', 'give' );
 					break;
+				/* Add Custom Fields */
+				case 'give_simple_note_field':
+					$cols['give_simple_note_field'] = __( 'Note', 'give' );
+					break;
+				case 'give_simple_anon_field':
+					$cols['give_simple_anon_field'] = __( 'Anonymous', 'give' );
+					break;
+				/* END Add Custom Fields */
 				case 'payment_gateway' :
 					$cols['payment_gateway'] = __( 'Payment Gateway', 'give' );
 					break;
@@ -270,6 +278,21 @@ class Give_CSV_Toolbox_Donations_Export extends Give_Batch_Export {
 				if ( ! empty( $columns['donation_status'] ) ) {
 					$data[ $i ]['donation_status'] = give_get_payment_status($payment, true);
 				}
+
+				/* Add Custom Fields */
+				if ( ! empty( $columns['give_simple_note_field'] ) ) {
+					$data[ $i ]['give_simple_note_field'] = $payment_meta['give_simple_note_field'];
+				}
+
+				if ( ! empty( $columns['give_simple_anon_field'] ) ) {
+					if ( isset($payment_meta['give_simple_anon_field']) && $payment_meta['give_simple_anon_field'] == "true" ) {
+						$data[ $i ]['give_simple_anon_field'] = __( 'Anonymous Donation', 'give' );
+					}
+					else {
+						$data[ $i ]['give_simple_anon_field'] = " ";
+					}
+				}
+				/* END Add Custom Fields */
 
 				if ( ! empty( $columns['payment_gateway'] ) ) {
 					$data[ $i ]['payment_gateway'] = $payment->gateway;
