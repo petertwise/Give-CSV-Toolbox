@@ -281,35 +281,6 @@ if ( ! class_exists( 'Give_Settings_CSV' ) ) :
                             </ul>
                         </div>
 
-                        <div id="give-csv-toolbox-custom-fields-wrap">
-                            <h4><?php esc_html_e( 'Form Field Manager Fields:', 'give' ); ?></h4>
-                            <p><?php esc_html_e( 'The following fields have been created by Form Field Manager.', 'give' ); ?></p>
-
-                            <div id="csv-toolbox-ffm-fields-wrap">
-                                <ul id="give-csv-toolbox-ffm-field-list" class="give-csv-toolbox-field-list">
-                                </ul>
-                            </div>
-
-                            <!-- content here loaded via AJAX -->
-                            <h4><?php esc_html_e( 'Custom Field Columns:', 'give' ); ?></h4>
-                            <p><?php esc_html_e( 'The following fields may have been created by custom code, or another plugin.', 'give' ); ?></p>
-
-
-                            <div id="csv-toolbox-non-hidden-fields-wrap">
-                                <ul id="give-csv-toolbox-standard-field-list" class="give-csv-toolbox-field-list">
-                                </ul>
-
-                            </div>
-
-                            <h4><?php esc_html_e( 'Hidden Custom Field Columns:', 'give' ); ?></h4>
-                            <p><?php esc_html_e( 'The following hidden custom fields contain data created by Give Core, a Give Add-on, another plugin, etc. Hidden fields are generally used for programming logic, but you may contain data you would like to export.', 'give' ); ?></p>
-                            <div id="csv-toolbox-hidden-fields-wrap">
-                                <ul id="give-csv-toolbox-hidden-field-list" class="give-csv-toolbox-field-list">
-                                </ul>
-                            </div>
-
-                        </div>
-
                         <div id="give-csv-toolbox-submit-wrap">
                             <input type="hidden" name="give-export-class" value="Give_CSV_Toolbox_Donations_Export"/>
 
